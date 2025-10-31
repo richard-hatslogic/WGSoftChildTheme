@@ -1,0 +1,8 @@
+{% sw_extends '@Storefront/storefront/page/checkout/confirm/index.html.twig' %}
+{% block page_checkout_confirm_tos_control_checkbox %}
+    <input type="checkbox" checked="" style="display:none;"
+           required="required"
+           id="tos"
+           form="confirmOrderForm"
+           name="tos"/>
+{% endblock %}
