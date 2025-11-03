@@ -1,0 +1,12 @@
+{% sw_extends '@Storefront/storefront/layout/navbar/categories.html.twig' %}
+{% block layout_navbar_categories_item %}
+    <div class="{% if level == 0 %}{% if navigationMedia %}col-4 {% else %}col-3 {% endif %}{% endif %}navigation-flyout-col">
+        {% block layout_navbar_categories_item_link %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block layout_navbar_categories_recoursion %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}

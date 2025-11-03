@@ -1,0 +1,27 @@
+{% sw_extends '@Storefront/storefront/component/address/address-personal.html.twig' %}
+                {% block component_address_personal_fields_first_name_input %}
+                    {% sw_include '@Storefront/storefront/component/form/form-input.html.twig' with {
+                        label: 'account.personalFirstNameLabel'|trans|sw_sanitize,
+                        id: idPrefix ~ prefix ~ '-personalFirstName',
+                        name: prefix ? prefix ~ '[firstName]' : 'firstName',
+                        value: (prefix and data.has(prefix)) ? data.get(prefix).get('firstName') : data.get('firstName'),
+                        autocomplete: 'section-personal given-name',
+                        violationPath: violationPath,
+                        validationRules: 'required',
+                        additionalClass: 'col-sm-6',
+                        placeholder: 'account.personalFirstNamePlaceholder'|trans|sw_sanitize,
+                    } %}
+                {% endblock %}
+                {% block component_address_personal_fields_last_name_input %}
+                    {% sw_include '@Storefront/storefront/component/form/form-input.html.twig' with {
+                        label: 'account.personalLastNameLabel'|trans|sw_sanitize,
+                        id: idPrefix ~ prefix ~ '-personalLastName',
+                        name: prefix ? prefix ~ '[lastName]' : 'lastName',
+                        value: (prefix and data.has(prefix)) ? data.get(prefix).get('lastName') : data.get('lastName'),
+                        autocomplete: 'section-personal family-name',
+                        violationPath: violationPath,
+                        validationRules: 'required',
+                        additionalClass: 'col-sm-6',
+                        placeholder: 'account.personalLastNamePlaceholder'|trans|sw_sanitize,
+                    } %}
+                {% endblock %}

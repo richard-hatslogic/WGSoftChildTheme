@@ -1,0 +1,46 @@
+body {
+    font-size: 0.875rem;
+}
+
+.breadcrumb {
+    --bs-breadcrumb-margin-bottom: 0.1rem;
+    --bs-breadcrumb-padding-y: 0.3rem;
+    background-color: white;
+    a {
+        font-size: 0.875rem;
+        color: $sw-text-color;
+        text-decoration: none;
+    }
+}
+
+.cms-section .cms-section-sidebar {
+    background-color: white;
+}
+
+// Conversion Header oben
+.ch-desktop-wrapper{
+    background-color: $sw-color-brand-primary !important;
+}
+
+/* AGB-Abfrage Label nach link verschieben, um die Breite vom Checkbox zu compensieren*/
+.checkout-confirm-tos-label {
+    margin-left: -1.5rem;
+    }
+
+a[data-ajax-modal], a {
+    text-decoration: none;
+}
+
+.home-bestsellers-slider .tns-nav {
+    display: none;
+}
+
+// Conversion Header oben
+.ch-desktop-wrapper{
+    background-color: $sw-color-brand-primary !important;
+}
+
+/* AGB-Abfrage Label nach link verschieben, um die Breite vom Checkbox zu compensieren*/
+.checkout-confirm-tos-label {
+    margin-left: -1.5rem;
+}

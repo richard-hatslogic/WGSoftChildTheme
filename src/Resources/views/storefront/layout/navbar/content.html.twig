@@ -1,0 +1,37 @@
+{% sw_extends '@Storefront/storefront/layout/navbar/content.html.twig' %}
+{% block layout_navbar_content %}
+    {% set category = navigationTree.category %}
+    {% set name = category.translated.name %}
+    <div class="container">
+        {% block layout_navbar_content_row %}
+            <div class="row">
+                {% block layout_navbar_content_row_category %}
+                    <div class="col">
+                        <div class="navigation-flyout-category-link">
+                            {% block layout_navbar_content_row_category_link %}
+                                {% if category.type == 'page' %}
+                                    <a href="{{ seoUrl('frontend.navigation.page', { navigationId: category.id }) }}"
+                                    itemprop="url"
+                                    title="{{ name }}">
+                                        {% block layout_navbar_content_row_category_link_text %}
+                                            {{ 'general.toCategory'|trans|sw_sanitize }} {{ name }}
+                                        {% endblock %}
+                                        <span class="icon icon-arrow-right icon-primary"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><path id="icons-solid-arrow-right" d="M6.7071 6.2929c-.3905-.3905-1.0237-.3905-1.4142 0-.3905.3905-.3905 1.0237 0 1.4142l3 3c.3905.3905 1.0237.3905 1.4142 0l3-3c.3905-.3905.3905-1.0237 0-1.4142-.3905-.3905-1.0237-.3905-1.4142 0L9 8.5858l-2.2929-2.293z"></path></defs><use transform="rotate(-90 9 8.5)" xlink:href="#icons-solid-arrow-right" fill="#758CA3" fill-rule="evenodd"></use></svg></span>
+                                    </a>
+                                {% endif %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                {% endblock %}
+
+                {% block layout_navbar_content_row_close %}
+                    {{ parent() }}
+                {% endblock %}
+            </div>
+        {% endblock %}
+
+        {% block layout_navbar_content_row_content %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% sw_extends '@Storefront/storefront/component/account/login.html.twig' %}
+ {% block component_account_login_form_fields %}
+        <div class="row g-2">
+            {% block component_account_login_form_mail %}
+                {% sw_include '@Storefront/storefront/component/form/form-input.html.twig' with {
+                type: 'email',
+                label: 'account.loginMailLabel'|trans|sw_sanitize,
+                id: 'loginMail',
+                name: 'username',
+                placeholder: 'account.loginMailPlaceholder'|trans|sw_sanitize,
+                autocomplete: 'username webauthn',
+                error: loginError,
+                validationRules: 'required,email',
+                additionalClass: 'col-md-6',
+            } %}
+        {% endblock %}
+
+        {% block component_account_login_form_password %}
+            {% sw_include '@Storefront/storefront/component/form/form-input.html.twig' with {
+                type: 'password',
+                label: 'account.loginPasswordLabel'|trans|sw_sanitize,
+                id: 'loginPassword',
+                name: 'password',
+                placeholder: 'account.loginPasswordPlaceholder'|trans|sw_sanitize,
+                autocomplete: 'current-password',
+                error: loginError,
+                validationRules: 'required',
+                additionalClass: 'col-md-6',
+            } %}
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% sw_extends '@Storefront/storefront/component/account/register.html.twig' %}
+                                    {% block component_account_register_personal_mail %}
+                                        {% sw_include '@Storefront/storefront/component/form/form-input.html.twig' with {
+                                            type: 'email',
+                                            label: 'account.personalMailLabel'|trans|sw_sanitize,
+                                            id: 'personalMail',
+                                            name: 'email',
+                                            value: data.get('email'),
+                                            autocomplete: 'section-personal email',
+                                            violationPath: '/email',
+                                            validationRules: 'required,email',
+                                            additionalClass: 'col-sm-6',
+                                            placeholder: 'account.personalMailPlaceholder'|trans|sw_sanitize,
+                                        } %}
+                                    {% endblock %}
+
+                                    {% block component_account_register_personal_mail_confirmation %}
+                                        {% sw_include '@Storefront/storefront/component/form/form-input.html.twig' with {
+                                            type: 'email',
+                                            label: 'account.personalMailConfirmationLabel'|trans|sw_sanitize,
+                                            id: 'personalMailConfirmation',
+                                            name: 'emailConfirmation',
+                                            value: data.get('emailConfirmation'),
+                                            autocomplete: 'section-personal email',
+                                            violationPath: '/email',
+                                            validationRules: 'confirmation,required,email',
+                                            additionalClass: 'col-sm-6',
+                                            placeholder: 'account.personalMailConfirmationPlaceholder'|trans|sw_sanitize,
+                                        } %}
+                                    {% endblock %}
+
+                                    {% block component_account_register_personal_password_input %}
+                                            {% sw_include '@Storefront/storefront/component/form/form-input.html.twig' with {
+                                                type: 'password',
+                                                label: 'account.personalPasswordLabel'|trans|sw_sanitize,
+                                                id: 'personalPassword',
+                                                name: 'password',
+                                                autocomplete: 'new-password',
+                                                description: passwordFieldDescription,
+                                                violationPath: '/password',
+                                                validationRules: 'required,minLength',
+                                                minlength: config('core.loginRegistration.passwordMinLength'),
+                                                additionalClass: 'col-sm-6 js-form-field-toggle-guest-mode',
+                                                placeholder: 'account.personalPasswordPlaceholder'|trans|sw_sanitize,
+                                            } %}
+                                    {% endblock %}
+
+                                    {% block component_account_register_personal_password_confirmation %}
+                                        {% sw_include '@Storefront/storefront/component/form/form-input.html.twig' with {
+                                            type: 'password',
+                                            label: 'account.personalPasswordConfirmationLabel'|trans|sw_sanitize,
+                                            id: 'personalPasswordConfirmation',
+                                            name: 'passwordConfirmation',
+                                            autocomplete: 'new-password',
+                                            violationPath: '/passwordConfirmation',
+                                            validationRules: 'required,confirmation',
+                                            additionalClass: 'col-sm-6 js-form-field-toggle-guest-mode',
+                                            placeholder: 'account.personalPasswordConfirmationPlaceholder'|trans|sw_sanitize,
+                                        } %}
+                                    {% endblock %}

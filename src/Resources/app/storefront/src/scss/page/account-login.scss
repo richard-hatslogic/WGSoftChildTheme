@@ -1,0 +1,32 @@
+.is-act-loginpage {
+    .account-register {
+        .card-title {
+            font-size: 1rem;
+        }
+        .form-control, .form-select, .form-text {
+            font-size: 0.875rem;
+        }
+        .login-password-recover a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .account-aside-btn {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+.is-act-accountaddressoverview {
+    .address-item-default-badge.text-bg-info {
+        background-color: $sw-color-brand-primary;
+    }
+}
+
+.account-aside {
+    &-btn {
+        font-size: 0.875rem;
+        text-decoration: none;
+    }
+}

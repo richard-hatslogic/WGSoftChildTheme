@@ -1,0 +1,38 @@
+{% sw_extends '@Storefront/storefront/component/address/address-form.html.twig' %}
+            {% block component_address_form_street %}
+                {# @deprecated tag:v6.8.0 - `additionalClass` will always be 'col-md-12' #}
+                {% sw_include '@Storefront/storefront/component/address/field/address-street-field.html.twig' with {
+                    additionalClass: isOldArrangement ? 'col-md-6' : 'col-md-12',
+                    placeholder: 'address.streetPlaceholder'|trans|sw_sanitize,
+                } %}
+            {% endblock %}
+            {% block component_address_form_zipcode_city %}
+                    {% set zipcodeField %}
+                        {% sw_include '@Storefront/storefront/component/address/field/address-zipcode-field.html.twig' with {
+                            placeholder: 'address.zipcodePlaceholder'|trans|sw_sanitize,
+                        } %}
+                    {% endset %}
+
+                    {% set cityField %}
+                        {% sw_include '@Storefront/storefront/component/address/field/address-city-field.html.twig' with {
+                            placeholder: 'address.cityPlaceholder'|trans|sw_sanitize,
+                        } %}
+                    {% endset %}
+
+                    {% set wrappedZipcodeField %}
+                        {% block component_address_form_zipcode_field %}
+                            {{ parent() }}
+                        {% endblock %}
+                    {% endset %}
+
+                    {% set wrappedCityField %}
+                        {% block component_address_form_city_field %}
+                            {{ parent() }}
+                        {% endblock %}
+                    {% endset %}
+
+                    {# @deprecated tag:v6.8.0 - Will be removed. Use `component_address_form_city_state_zipcode`, `component_address_field_city` of `address-city-field.html.twig` or `component_address_field_zipcode` of `address-zipcode-field.html.twig` as replacement #}
+                    {% block component_address_form_zipcode_city_fields %}
+                        {{ parent() }}
+                    {% endblock %}
+                {% endblock %}

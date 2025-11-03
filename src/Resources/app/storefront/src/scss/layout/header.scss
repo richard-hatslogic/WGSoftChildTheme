@@ -1,0 +1,13 @@
+.header-main {
+    .header-cart {
+        &-total {
+           font-size: 1rem;
+        }
+    }
+    .ch-desktop-wrapper {
+        @media (min-width: 768px) {
+            background-color: $sw-color-brand-primary;
+            color: #ffffff;
+        }
+    }
+}
