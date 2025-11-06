@@ -5,7 +5,7 @@
     }
     .main-navigation-menu {
         position: unset;
-        padding-bottom: 0;
+        padding: 0;
         .dropdown-menu {
             left: 0;
             border: 0;
@@ -21,9 +21,9 @@
         content: none;
     }
     .main-navigation-link {
+        display: inline-flex;
         padding: 0.3rem 0.875rem 0 0.875rem !important;
         &.active {
-            display: inline-flex;
             background-color: $sw-color-brand-primary;
             color: white;
         }

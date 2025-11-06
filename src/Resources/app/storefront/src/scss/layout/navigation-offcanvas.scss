@@ -1,16 +1,20 @@
 .offcanvas {
-    &.navigation-offcanvas {
-        .offcanvas-header {
-            .offcanvas-close {
-                font-size: 0.875rem;
+    .offcanvas-header {
+        .offcanvas-close {
+            font-size: 0.875rem;
+            color: #798490;
+            background-color: #f9f9f9;
+            border: 0;
+            .icon {
                 color: #798490;
-                background-color: #f9f9f9;
-                border: 0;
-                .icon {
-                    color: #798490;
-                }
+            }
+            &:hover {
+                background-color: #d4d4d4;
+                border-color: #c7c7c7;
             }
         }
+    }
+    &.navigation-offcanvas, &.cart-offcanvas {
         .offcanvas-body {
             .navigation-offcanvas-actions {
                 padding: 0;
@@ -22,7 +26,19 @@
             .navigation-offcanvas-content.navigation-offcanvas-root {
                 transition: left 0.5s ease-in;
             }
+
+            .offcanvas-cart-header h4 {
+                margin-bottom: 0;
+            }
         }
     }
 
+
+    &.cart-offcanvas {
+        .offcanvas-cart {
+            .line-item-total-price {
+                justify-content: flex-end;
+            }
+        }
+    }
 }

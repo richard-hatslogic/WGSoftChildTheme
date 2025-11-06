@@ -25,3 +25,22 @@
                         placeholder: 'account.personalLastNamePlaceholder'|trans|sw_sanitize,
                     } %}
                 {% endblock %}
+                {% block component_address_personal_account_type_select %}
+                    {% sw_include '@Storefront/storefront/component/form/form-select.html.twig' with {
+                        label: 'account.personalTypeLabel'|trans|sw_sanitize,
+                        id: idPrefix ~ prefix ~ '-accountType',
+                        name: accountTypeFieldName,
+                        options: accountTypeOptions,
+                        validationRules: 'required',
+                        disabled: (onlyCompanyRegistration) ? 'true',
+                        additionalClass: 'col-md-3 col-sm-6 contact-type',
+                        additionalSelectClass: 'contact-select',
+                        attributes: {
+                            'data-form-field-toggle': 'true',
+                            'data-form-field-toggle-target': toggleTarget,
+                            'data-form-field-toggle-value': constant('Shopware\\Core\\Checkout\\Customer\\CustomerEntity::ACCOUNT_TYPE_BUSINESS'),
+                            'data-form-field-toggle-scope': (scope == 'parent') ? 'parent' : 'all',
+                            'data-form-field-toggle-parent-selector': (scope == 'parent') ? parentSelector,
+                        },
+                    } %}
+                {% endblock %}

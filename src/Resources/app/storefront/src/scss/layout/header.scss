@@ -1,4 +1,7 @@
 .header-main {
+    .top-bar {
+        padding-top: 0.625rem;
+    }
     .header-cart {
         &-total {
            font-size: 1rem;
@@ -9,5 +12,8 @@
             background-color: $sw-color-brand-primary;
             color: #ffffff;
         }
+    }
+    .ch-mobile-wrapper {
+        color: #ffffff;
     }
 }

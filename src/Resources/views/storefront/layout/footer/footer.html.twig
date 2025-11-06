@@ -4,3 +4,20 @@
 		{{ "WGSoft.de - Automotive Diagnostic Software" }}
 	</div>
 {% endblock %}
+
+{% block layout_footer_navigation_hotline_headline %}
+    <div class="footer-column-headline footer-headline js-footer-column-headline"
+            id="collapseFooterHotlineTitle"
+            data-bs-target="#collapseFooterHotline"
+            data-bs-toggle="collapse"
+            aria-controls="collapseFooterHotline"
+            aria-labelledby="collapseFooterHotlineTitle"
+            aria-expanded="true"
+            role="listitem">
+        {{ 'footer.serviceHotlineHeadline'|trans|sw_sanitize }}
+
+        {% block layout_footer_navigation_hotline_icons %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}

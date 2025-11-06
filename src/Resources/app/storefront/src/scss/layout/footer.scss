@@ -1,0 +1,16 @@
+.footer-main {
+    .footer-column {
+        &-headline {
+            font-size: 1rem;
+            color: $sw-color-brand-primary;
+        }
+        .footer-contact-hotline a {
+            font-size: 1rem;
+        }
+    }
+    .footer-bottom {
+        .footer-vat p a {
+            text-decoration: underline;
+        }
+    }
+}

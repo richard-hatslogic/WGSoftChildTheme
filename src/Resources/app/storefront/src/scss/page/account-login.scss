@@ -3,17 +3,11 @@
         .card-title {
             font-size: 1rem;
         }
-        .form-control, .form-select, .form-text {
-            font-size: 0.875rem;
-        }
         .login-password-recover a {
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
             }
-        }
-        .account-aside-btn {
-            font-size: 0.875rem;
         }
     }
 }
@@ -29,4 +23,28 @@
         font-size: 0.875rem;
         text-decoration: none;
     }
+    .list-group-item {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.line-item-product-number, .line-item-delivery-date {
+    font-size: 0.75rem;
+}
+
+.account-menu {
+    &-header {
+        font-size: 0.875rem;
+    }
+    &-dropdown {
+        z-index: 9999;
+    }
+}
+
+.dropdown-menu {
+    font-size: 0.875rem;
+}
+
+.is-act-accountaddressoverview .address-item-default-badge.text-bg-info {
+    padding: 8px 24px;
 }

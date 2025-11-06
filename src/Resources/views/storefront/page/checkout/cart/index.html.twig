@@ -1,0 +1,16 @@
+{% sw_extends '@Storefront/storefront/page/checkout/cart/index.html.twig' %}
+
+                            {% block page_checkout_cart_shipping_costs_trigger %}
+                                {% set PHYSICAL_STATE = constant('Shopware\\Core\\Content\\Product\\State::IS_PHYSICAL') %}
+                                {% if page.cart.lineItems.hasLineItemWithState(PHYSICAL_STATE) %}
+                                    <a class="btn btn-link cart-shipping-costs-btn"
+                                       data-bs-toggle="collapse"
+                                       href="#collapseShippingCost"
+                                       role="button"
+                                       aria-expanded="false"
+                                       aria-controls="collapseExample">
+                                        {{ 'checkout.shippingCosts'|trans|sw_sanitize }}
+                                        <span class="icon icon-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><path id="icons-solid-arrow-right" d="M6.7071 6.2929c-.3905-.3905-1.0237-.3905-1.4142 0-.3905.3905-.3905 1.0237 0 1.4142l3 3c.3905.3905 1.0237.3905 1.4142 0l3-3c.3905-.3905.3905-1.0237 0-1.4142-.3905-.3905-1.0237-.3905-1.4142 0L9 8.5858l-2.2929-2.293z"></path></defs><use transform="rotate(-90 9 8.5)" xlink:href="#icons-solid-arrow-right" fill="#758CA3" fill-rule="evenodd"></use></svg></span>
+                                    </a>
+                                {% endif %}
+                            {% endblock %}

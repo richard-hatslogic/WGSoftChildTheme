@@ -1,10 +1,18 @@
 /* base */
 @import "base/global.scss";
 
+/* component */
+@import "component/product-box.scss";
+
+/* block */
+@import "block/product-detail.scss";
+
 /* layout */
 @import "layout/main-navigation.scss";
 @import "layout/header.scss";
 @import "layout/navigation-offcanvas.scss";
+@import "layout/footer.scss";
+@import "layout/checkout.scss";
 
 /* page */
 @import "page/account-login.scss";

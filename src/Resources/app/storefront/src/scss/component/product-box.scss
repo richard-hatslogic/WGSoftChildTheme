@@ -1,0 +1,35 @@
+.cms-element-product-listing .cms-listing-col {
+    margin-bottom: 30px;
+}
+.card {
+    &.product-box {
+        .product-price-tax-link {
+            display: none;
+        }
+        .product-description {
+            height: 3.375rem;
+            font-size: 0.875rem;
+            line-height: 1.125rem;
+        }
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+    .account-profile-change {
+        font-size: 0.75rem;
+    }
+}
+
+.base-slider-controls-prev, .base-slider-controls-next {
+    color: #4a545b;
+    opacity: 0.5;
+}
+.base-slider-controls-prev:hover, .base-slider-controls-next:hover {
+    opacity: 1;
+}
+.image-slider-controls-prev.is-nav-prev-outside {
+    left: -5px;
+}
+.image-slider-controls-next.is-nav-next-outside {
+    right: -5px;
+}

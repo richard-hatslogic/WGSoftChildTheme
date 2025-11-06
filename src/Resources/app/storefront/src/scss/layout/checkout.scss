@@ -1,0 +1,19 @@
+.checkout-aside {
+    .checkout-aside-product-list {
+        .line-item-total-price {
+            justify-content: flex-end;
+        }
+    }
+    .checkout-aside-summary-total {
+        font-size: 1rem;
+    }
+}
+.cart-main-header-item-counter, .confirm-main-header-item-counter {
+    display: none;
+}
+
+.cart-add-product-container>form {
+    @media (min-width: 768px) {
+        max-width: 250px;
+    }
+}
