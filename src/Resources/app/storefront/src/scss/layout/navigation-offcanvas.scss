@@ -30,6 +30,9 @@
             .offcanvas-cart-header h4 {
                 margin-bottom: 0;
             }
+            .offcanvas-cart-header-count {
+                font-size: 1.09375rem;
+            }
         }
     }
 
@@ -40,5 +43,9 @@
                 justify-content: flex-end;
             }
         }
+    }
+
+    .offcanvas-summary .js-toggle-shipping-selection {
+        font-size: 90%;
     }
 }

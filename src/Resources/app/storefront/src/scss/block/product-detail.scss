@@ -3,9 +3,14 @@
         text-decoration: none;
     }
     .product-detail-configurator-option-label {
+        line-height: 1.5;
+        padding: 5px 10px;
         &:hover {
             border: 1px solid $sw-color-brand-primary;
         }
+    }
+    .product-detail-configurator-group-title {
+        font-size: 0.875rem;
     }
     .btn-check:checked+.btn {
         background-color: $sw-color-brand-primary;

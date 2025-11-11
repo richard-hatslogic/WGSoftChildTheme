@@ -1,0 +1,6 @@
+{
+  "footer": {
+    "includeVatTextPage": "*All prices incl. VAT plus <a href=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise.",
+    "excludeVatTextPage": "*All prices excl. VAT plus <a href=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise."
+  }
+}

@@ -19,10 +19,6 @@ ol, ul, dl {
     margin-bottom: 1rem;
 }
 
-small, .small {
-    font-size: 1.09375rem;
-}
-
 .btn {
     font-size: 0.875rem;
 }
@@ -100,4 +96,9 @@ small, .small {
 
 .btn-check:checked+.product-detail-configurator-option-label {
     --bs-btn-border-width: 1px;
+}
+
+.cms-section-sidebar-mobile-wrap.boxed >.row {
+    padding-left: 20px;
+    padding-right: 20px;
 }
