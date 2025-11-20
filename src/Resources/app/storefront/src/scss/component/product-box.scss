@@ -23,9 +23,13 @@
 .base-slider-controls-prev, .base-slider-controls-next {
     color: #4a545b;
     opacity: 0.5;
+    border: 0;
 }
 .base-slider-controls-prev:hover, .base-slider-controls-next:hover {
     opacity: 1;
+}
+.base-slider-controls-prev .icon, .base-slider-controls-next .icon {
+    color: #4a545b;
 }
 .image-slider-controls-prev.is-nav-prev-outside {
     left: -5px;

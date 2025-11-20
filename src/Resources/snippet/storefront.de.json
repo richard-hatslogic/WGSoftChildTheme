@@ -1,6 +1,6 @@
 {
   "footer": {
-    "includeVatTextPage": "*Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.",
-    "excludeVatTextPage": "*Alle Preise exkl. gesetzl. Mehrwertsteuer zzgl. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben."
+    "includeVatTextPage": "* Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.",
+    "excludeVatTextPage": "* Alle Preise exkl. gesetzl. Mehrwertsteuer zzgl. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben."
   }
 }
